@@ -140,8 +140,9 @@ img {
 
   padding-top: 32px;
   padding-bottom: 32px;
-  /* 
-  transition: var(--portfolio-card-animation); */
+
+  transition-property: color;
+  transition-timing-function: var(--portfolio-card-animation);
 }
 
 .header-link {
@@ -169,6 +170,10 @@ img {
 }
 
 .header-link:hover::after {
+  opacity: 1;
+}
+
+.header-link:focus::after {
   opacity: 1;
 }
 
@@ -402,17 +407,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: var(--portfolio-card-animation);
+
+  transition: background-color var(--portfolio-card-animation);
 }
 
 .team-soc-icon {
   fill: #afb1b8;
-  transition: var(--portfolio-card-animation);
+  transition: fill var(--portfolio-card-animation);
 }
-
-/* .team-soc-link .team-soc-icon {
-  transition: var(--portfolio-card-animation);
-} */
 
 .team-soc-link:hover,
 .team-soc-link:focus {
@@ -461,17 +463,15 @@ img {
   justify-content: center;
   align-items: center;
   border: 1px solid #afb1b8;
-  transition: var(--portfolio-card-animation);
+
+  transition: border-color var(--portfolio-card-animation);
 }
 
 .clients-icon {
   fill: #afb1b8;
-  transition: var(--portfolio-card-animation);
-}
 
-/* .clients-link .clients-icon {
-  transition: var(--portfolio-card-animation);
-} */
+  transition: fill var(--portfolio-card-animation);
+}
 
 .clients-link:hover,
 .clients-link:focus {
@@ -562,7 +562,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: var(--portfolio-card-animation);
+
+  transition: background-color var(--portfolio-card-animation);
 }
 
 .footer-soc-link:hover,
@@ -572,7 +573,8 @@ img {
 
 .footer-soc-icon {
   fill: var(--interactive-main-title);
-  transition: var(--portfolio-card-animation);
+
+  transition: fill var(--portfolio-card-animation);
 }
 /*-----------------------PORTFOLIO.HTML-------------------*/
 
@@ -606,7 +608,8 @@ img {
   color: var(--title-text-color);
   background-color: #f5f4fa;
 
-  transition: var(--portfolio-card-animation);
+  transition: color, background-color,
+    box-shadow var(--portfolio-card-animation);
 }
 
 .portfolio-btn-list .portfolio-btn-item + .portfolio-btn-item {
@@ -633,7 +636,8 @@ img {
 
 .portfolio-item-link {
   display: block;
-  transition: var(--portfolio-card-animation);
+
+  transition: box-shadow var(--portfolio-card-animation);
 }
 
 .portfolio-item-link:hover,
@@ -666,7 +670,7 @@ img {
   letter-spacing: 0.03em;
 
   color: #ffffff;
-  background: rgba(33, 150, 243, 0.9);
+  background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
   transition: var(--portfolio-card-animation);
