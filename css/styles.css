@@ -587,19 +587,20 @@ header .container {
   column-gap: 24px;
 }
 
-.portfolio-item {
+.portfolio-item-link {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: var(--portfolio-card-animation);
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio-item-link:hover,
+.portfolio-item-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.portfolio-item:hover .portfolio-top-text {
+.portfolio-item-link:hover .portfolio-top-text,
+.portfolio-item-link:focus .portfolio-top-text {
   transform: translateY(0);
 }
 
